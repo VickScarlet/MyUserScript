@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         DMZJ漫画全屏自适应
 // @namespace    http://tampermonkey.net/
-// @version      0.0.2
+// @version      0.0.3
 // @description  动漫之家漫画全屏自适应
 // @author       VickScarlet
 // @include      /^(http)s?:\/\/(manhua\.dmzj\.com)\/.*\/[0-9]+.shtml.*
