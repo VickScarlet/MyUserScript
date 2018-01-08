@@ -1,19 +1,24 @@
 // ==UserScript==
 // @name         DMZJ漫画全屏自适应
-// @homepage    https://greasyfork.org/en/scripts/37149
+// @namespace    http://tampermonkey.net/
 // @version      0.0.2
 // @description  动漫之家漫画全屏自适应
 // @author       VickScarlet
 // @include      /^(http)s?:\/\/(manhua\.dmzj\.com)\/.*\/[0-9]+.shtml.*
+// @include      /^(http)s?:\/\/(www\.dmzj\.com)\/view\/.*\/[0-9]+.html.*
 // @grant        none
-// @namespace    
 // ==/UserScript==
 
 (function () {
     'use strict';
     var div = document.getElementsByTagName("div");
     for (var i = 0; i < div.length; i++) {
-        div[i].style.display = "none";
+        if (div[i].className != "comic_wraCon autoHeight") {
+            div[i].style.display = "none";
+        } else {
+            div[i].id = "center_box";
+            div[i].className = "comic_wraCon";
+        }
     }
     document.getElementById("center_box").style.position = "absolute";
     document.getElementById("center_box").style.display = "flex";
