@@ -50,7 +50,6 @@ function init_view(){
 
 function init_key(){
     let count = arr_pages.length;
-    console.log("count"+count);
     $('body').keyup(function(event) {
         if (document.activeElement.localName != "input" && document.activeElement.localName != "select" ) {
             let value = event.keyCode;
@@ -68,7 +67,6 @@ function init_key(){
             }else if(value == 67){//c
                 let curr = parseInt($("#imgcontent").attr("index"));
                 let next = curr + 1;
-                console.log("next"+next);
                 if(next+1>count){
                     let nextc = $("#next_chapter");
                     if(nextc.length > 0){ nextc[0].click(); }
