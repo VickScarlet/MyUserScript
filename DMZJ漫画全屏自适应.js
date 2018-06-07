@@ -55,12 +55,12 @@ function init_key(){
     console.log("count"+count);
     $('body').keyup(function(event) {
         if (document.activeElement.localName != "input" && document.activeElement.localName != "select" ) {
-            var value = event.keyCode;
+            let value = event.keyCode;
             if (value == 88) {//x
                 let curr = parseInt($("#imgcontent").attr("index"));
                 let prev = curr - 1;
                 if(prev<0){
-                    var prevc = $("#prev_chapter");
+                    let prevc = $("#prev_chapter");
                     if(prevc.length > 0){ prevc[0].click(); }
                     else alert("已经是最前了");
                 }else{
@@ -72,7 +72,7 @@ function init_key(){
                 let next = curr + 1;
                 console.log("next"+next);
                 if(next+1>count){
-                    var nextc = $("#next_chapter");
+                    let nextc = $("#next_chapter");
                     if(nextc.length > 0){ nextc[0].click(); }
                     else alert("已经是最后了");
                 }else{
