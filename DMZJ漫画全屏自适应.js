@@ -49,9 +49,6 @@ function init_view(){
 }
 
 function init_key(){
-    let curr = parseInt($("#imgcontent").attr("index"));
-    let prev = curr - 1;
-    let next = curr + 1;
     let count = arr_pages.length;
     console.log("count"+count);
     $('body').keyup(function(event) {
