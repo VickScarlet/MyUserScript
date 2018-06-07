@@ -8,6 +8,7 @@
 // @include      /^(http)s?:\/\/(www\.dmzj\.com)\/view\/.*\/[0-9]+.html.*
 // @grant        none
 // ==/UserScript==
+/*jshint esversion: 6 */
 
 function initial(){
     init_view();
